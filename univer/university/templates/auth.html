@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для ввода данных</title>
+</head>
+<body>
+    <h2>Заполните форму:</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Логин:</label>
+        <input type="username" id="username" name="username">
+        <p></p>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password">
+        <p></p>
+        <button type="submit">Отправить</button>
+         <h6><font color="red">{{error}}</font></h6>
+    </form>
+</body>
+</html>
