@@ -10,10 +10,10 @@ import os
 username = os.getenv('USERNAME')
 
 def code():
-    first_number = random.randint(1, 9) * 1000
-    second_number = random.randint(0, 9) * 100
-    third_number = random.randint(0, 9) * 10
-    fourth_number = random.randint(0, 9)
+    first_number = random.SystemRandom().randint(1, 9) * 1000
+    second_number = random.SystemRandom().randint(0, 9) * 100
+    third_number = random.SystemRandom().randint(0, 9) * 10
+    fourth_number = random.SystemRandom().randint(0, 9)
     return first_number+second_number+third_number+fourth_number
 
 ACCESS_CODE = code()
